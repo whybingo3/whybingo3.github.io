@@ -1,0 +1,74 @@
+<div id="content">
+    <article class="post">
+        <h1 class="headline">{{ page.title }}</h1>      <!--标题和时间-->
+        <small class="meta">{{ page.date | date: "%Y - %m - %d" }}</small>
+
+        <div class="BlogAnchor">
+            <p><b id="AnchorContentToggle" title="收起" style="cursor:pointer;">目录[-]</b></p>
+            <div class="AnchorContent" id="AnchorContent"> </div>
+        </div>
+
+        {{ content }}  <!-- 文章内容 -->
+
+        <ul id="tag_boxes" class="tag_box inline">      <!--标签栏-->
+            {% assign tags_list = page.tags %}
+            {% include JB/tags_list %}
+        </ul>
+
+
+        <address class="signature">     <!--文章尾部作者和时间-->
+            <a class="author" href="{{ HOME_PATH }}">Author: {{ site.author.name }}</a> 
+            <span class="date">{{ page.date | date_to_long_string }}</span>
+            <span class="location">{{ page.location }}</span>
+        </address>
+
+
+        <div class="prev-next">     <!--上/下一篇-->
+            {% if page.previous %}
+                <a href="{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}">&larr; 上一篇</a>
+            {% endif %}
+            {% if page.next %}
+                <a href="{{ page.next.url }}" class="next" title="{{ page.next.title }}">下一篇 &rarr;</a>
+            {% endif %}
+        </div>
+    </article>
+</div><!-- End Page -->
+
+{% include JB/comments %}   <!-- 评论框 -->
+
+<!-- 这里是JiaThis的js,放在这里是为了提高页面加载速度 -->
+<script type="text/javascript" >
+var jiathis_config={
+	summary:"",
+	hideMore:true
+}
+</script>
+<script type="text/javascript" src="http://v2.jiathis.com/code/jia.js" charset="utf-8"></script>
+
+<!-- 代码高亮 -->
+<link rel="stylesheet" href="/assets/themes/kingauthur/css/pygments.css" type="text/css" />
+
+<!-- 生成文章目录 -->
+<link rel="stylesheet" href="/assets/themes/kingauthur/css/toc.css" type="text/css" />
+<script type="text/javascript" src="/assets/themes/kingauthur/js/toc.js"></script>                              
+<script type="text/javascript" src="/assets/themes/kingauthur/js/toc-smooth.js"></script> 
+
+<!--粗体显示导航栏分类-->
+<script type="text/javascript">
+    {% if page.category == "tech"%}
+        showCurrentItem(document.getElementById("menu-item-tech"));
+    {% endif%}
+
+    {% if page.category == "life"%}
+        showCurrentItem(document.getElementById("menu-item-life"));
+    {% endif%}
+
+    {% if page.category == "read"%}
+        showCurrentItem(document.getElementById("menu-item-read"));
+    {% endif%}
+
+    {% if page.category == "travel"%}
+        showCurrentItem(document.getElementById("menu-item-travel"));
+    {% endif%}
+</script>
+
