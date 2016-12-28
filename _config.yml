@@ -1,6 +1,6 @@
 # Site settings
-title: YYP Blog
-SEOTitle: 姚永平的博客 | YYP Blog
+title: 涂生
+SEOTitle: 姚永平的博客 | 涂生
 header-img: img/home-bg.jpg
 email: yypbingo@gmail.com
 description: "关于前端与伪文艺青年自我熏陶！"
@@ -13,8 +13,8 @@ baseurl: ""                             # for example, '/blog' if your blog host
 # SNS settings
 RSS: false
 #weibo_username:     yyppro
-zhihu_username:     yyppro
-github_username:    yyppro
+zhihu_username:     yypbingo
+github_username:    whybingo3
 #twitter_username:  yyppro
 #facebook_username:  yyppro
 # linkedin_username:  firstname-lastname-idxxxx
