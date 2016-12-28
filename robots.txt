@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /assets
-Allow: /posts
-Sitemap: http://knowact.github.io/sitemap.txt
-Sitemap: http://knowact.github.io/atom.xml
