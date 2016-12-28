@@ -1,126 +1,49 @@
-# Site settings
-title: 涂生
-SEOTitle: 姚永平的博客 | 涂生
-header-img: img/home-bg.jpg
-email: yypbingo@gmail.com
-description: "关于前端与伪文艺青年自我熏陶！"
-keyword: "YYP Blog,博客, 个人网站, 互联网"
-url: "https://whybingo3.github.io/"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+# Dependencies
+markdown:            kramdown 
+highlighter:         rouge 
 
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           
+#relative_permalinks: true
 
+# Setup
+title:               Yateendra Sahu
+#tagline:             'Sahu'
+description:         Yateendra sahu's official website 
+url:                 http://yateendra.net
+baseurl:             /
+paginate:            15
 
-# SNS settings
-RSS: false
-#weibo_username:     yyppro
-zhihu_username:     yypbingo
-github_username:    whybingo3
-#twitter_username:  yyppro
-#facebook_username:  yyppro
-# linkedin_username:  firstname-lastname-idxxxx
+tagline: A log of everyday life
+disqus_shortname: yateendra
 
+# About/contact
+author:
+  name:              Yateendra 
+  url:               http://yateendra.net 
+  email:             yateendra.sahu@gmail.com 
+  googleplus:        https://plus.google.com/+yateendrasahu/
 
+# Timezone
+timezone: Asia/Kolkata
 
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# Custom vars
+version:             1.0.0
 
-
-
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
-
-
-
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
-
-
-# Disqus settings
-#disqus_username: _your_disqus_short_name_
-
-# Duoshuo settings
-duoshuo_username: yypblog
-# Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
-
-
-
-
-# Analytics settings
-# Baidu Analytics 
-# ba_track_id: [your track id]
-
-# Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
-
-
-
-# Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "游走世界的边缘，<br>离开世界之前，一切都是过程"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
-
-
-# Featured Tags
-featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
-
-
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
-
-
-
-# Friends
-friends: [
-    {
-        title: "阮一峰博客",
-        href: "http://www.ruanyifeng.com/blog/"
-    },{
-        title: "张鑫旭博客",
-        href: "http://www.zhangxinxu.com/wordpress/"
-    },{
-        title: "前端外刊评论",
-        href: "http://qianduan.guru/"
-    },{
-        title: "刘未鹏的博客",
-        href: "http://mindhacks.cn/"     
-    },{
-        title: "酷壳–COOLSHELL",
-        href: "http://coolshell.cn/"
-    },{
-        title: "左岸读书",
-        href: "http://www.zreading.cn/"
-    },{
-        title: "读书马上",
-        href: "http://www.dushumashang.com/"
-    },{
-        title: "战隼的学习探索",
-        href: "http://www.read.org.cn/"
-    },{
-        title: "学而时嘻之",
-        href: "http://www.geekonomics10000.com/"
-    },{
-        title: "褪墨-时间管理",
-        href: "http://www.mifengtd.cn/"
-    },{
-        title: "独立写生",
-        href: "http://www.cnfeat.com/"
-    }
-]
+# Custom gems
+gems:
+    - jekyll-sitemap
+    - jekyll-seo-tag
+    - jekyll-mentions
+    - jemoji
+    - jekyll-redirect-from
+    - jekyll-feed
+   
+# jekyll-tagging params
+tag_page_layout: blog_by_tag
+tag_page_dir: blog/tag
+tag_feed_layout: blog_by_tag
+tag_feed_dir: blog/tag
+tag_permalink_style: pretty

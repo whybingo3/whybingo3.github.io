@@ -1,0 +1,34 @@
+<a href="#" onclick="disqus();return false;"></a>
+<div id="disqus_thread">
+   
+</div>
+<script type="text/javascript">
+var disqus_shortname = "ygit";
+var disqus_loaded = false;
+function disqus() {
+ 
+  if (!disqus_loaded)  {
+    
+    disqus_loaded = true;
+    
+    var e = document.createElement("script");
+    e.type = "text/javascript";
+    e.async = true;
+    e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+    (document.getElementsByTagName("head")[0] ||
+     document.getElementsByTagName("body")[0])
+    .appendChild(e);
+  }
+} 
+ 
+</script>
+
+<script type="text/javascript">
+  window.onscroll = function(e) {
+    if ((window.innerHeight + window.scrollY) 
+        >= document.body.offsetHeight) 
+    {
+        if (!disqus_loaded) disqus(); 
+    }
+};
+</script>
